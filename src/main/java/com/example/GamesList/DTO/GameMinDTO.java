@@ -2,6 +2,7 @@ package com.example.GamesList.DTO;
 
 
 import com.example.GamesList.entities.Game;
+import com.example.GamesList.projections.GameMinProjection;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,4 +27,14 @@ public class GameMinDTO {
         imgUrl = entity.getImgUrl();
         shortDescription = entity.getShortDescription();
     }
+
+    public GameMinDTO(GameMinProjection gameMinProjection) {
+        id = gameMinProjection.getId();
+        title = gameMinProjection.getTitle();
+        year = gameMinProjection.getYear();
+        imgUrl = gameMinProjection.getImgUrl();
+        shortDescription = gameMinProjection.getShortDescription();
+    }
+
+
 }
